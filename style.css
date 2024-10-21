@@ -6,6 +6,20 @@ body {
     flex-direction: column;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    color: #f9faf8;
+    background-color: #3882f6;
+    font-weight: 900;
+}
+
 /* Colours */
 
 .dark-blue {
@@ -54,14 +68,14 @@ body {
 
 /* Body */
 
-.section1 {
+.section {
     display: flex;
     justify-content: center;
     margin: 0;
+    padding: 32px;
 }
 
 .hero {
-    padding: 32px 0;
     width: 1200px;
     display: flex;
     gap: 80px;
@@ -87,24 +101,17 @@ body {
     font-weight: 900;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
 .header li {
     font-size: 18px;
     color: #e5e7eb;
     font-weight: 100;
 }
 
-button {
-    padding: 8px 24px;
-    border: none;
-    border-radius: 4px;
-    color: #f9faf8;
-    background-color: #3882f6;
-    font-weight: 900;
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-header {
@@ -113,9 +120,47 @@ button {
     font-weight: 900;
 }
 
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.card-item {
+    width: 160px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item img {
+    border: 3px solid #3882f6;
+    border-radius: 16px;
+}
+
+.card-item p {
+    font-size: 18px;
+    color: #1f2937;
+    font-weight: 100;
+    text-align: center;
+}
+
+.pull-quote {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
 .quote {
     font-size: 36px;
     color: #1f2937;
     font-weight: 100;
     font-style: italic;
+}
+
+.caption {
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 700;
 }
