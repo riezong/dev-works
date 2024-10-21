@@ -1,0 +1,64 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.dark-blue {
+    background-color: #1f2937;
+}
+
+.hero-main {
+    font-size: 48px;
+    color: #f9faf8;
+    font-weight: 900;
+}
+
+.subtext {
+    font-size: 18px;
+    color: #e5e7eb;
+    font-weight: 100;
+}
+
+.logo {
+    font-size: 24px;
+    color: #f9faf8;
+    font-weight: 900;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header li {
+    font-size: 18px;
+    color: #e5e7eb;
+    font-weight: 100;
+}
+
+button {
+    color: #f9faf8;
+    background-color: #3882f6;
+    border: 2px solid #f9faf8;
+    border-radius: 4px;
+}
+
+.blue {
+    background-color: #3882f6;
+}
+
+.info-header {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+}
+
+.grey {
+    background-color: #e5e7eb;
+}
+
+.quote {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 100;
+    font-style: italic;
+}
