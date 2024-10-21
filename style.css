@@ -164,3 +164,26 @@ button {
     font-size: 18px;
     font-weight: 700;
 }
+
+.cta {
+    padding: 16px 32px;
+    border-radius: 8px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    color: #f9faf8;
+}
+
+.cta button {
+    flex: 0 0 auto;
+    border: 2px solid #f9faf8;
+}
+
+.footer {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
