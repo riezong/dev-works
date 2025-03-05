@@ -45,8 +45,8 @@ const dateDiceData = (function () {
 			let min = Math.ceil(0); // Ensure min is rounded up to nearest integer
 			let max = Math.floor(arrayLength); // Ensure max is rounded down to nearest integer
 			let result = Math.floor(Math.random() * (max - min)) + min;
-			// console.log(result);
-			console.log(this.array[result]);
+			console.log(result);
+			return this.array[result];
 		}
 	}
 	return {
@@ -68,47 +68,58 @@ const render = function () {
 
 	const about = document.createElement('p');
 	about.textContent =
-		"Don't know what to do? Just roll the dice and let fate lead your way!";
+		"Starlight, whispers, and... date night dilemmas?  Don't let indecision dim your romantic spark!  ✨  When those sweet nothings turn into 'What should we do?', just roll our Date Dice!  Let fate (and a little bit of randomness) guide your hearts to a perfect adventure, filled with laughter, connection, and maybe even a sprinkle of magic.  Let the dice decide, and let the romance bloom! 💖";
 
 	content.appendChild(h1);
 	content.appendChild(about);
 
 	// Buttons
+	const diceGrid = document.createElement('div');
+	diceGrid.setAttribute('id', 'diceGrid');
 	const numberOfDice = 4;
 	for (let i = 0; i < numberOfDice; i++) {
 		const dice = document.createElement('button');
 		dice.setAttribute('id', 'dice-' + [i]);
 		dice.addEventListener('click', handleClick);
+
+		const diceLabel = document.createElement('p');
+		diceLabel.textContent = dateDiceData.diceLabels[i];
+		dice.appendChild(diceLabel);
+
+		const diceResult = document.createElement('p');
+
 		function handleClick() {
 			switch (i) {
 				case 0:
 					const activityDice1 = new dateDiceData.Dice(
 						dateDiceData.activityDice1Options
 					);
-					activityDice1.rollDice();
+					diceResult.textContent = activityDice1.rollDice();
 					break;
 				case 1:
 					const activityDice2 = new dateDiceData.Dice(
 						dateDiceData.activityDice2Options
 					);
-					activityDice2.rollDice();
+					diceResult.textContent = activityDice2.rollDice();
 					break;
 				case 2:
 					const foodDice1 = new dateDiceData.Dice(
 						dateDiceData.foodDice1Options
 					);
-					foodDice1.rollDice();
+					diceResult.textContent = foodDice1.rollDice();
 					break;
 				case 3:
 					const foodDice2 = new dateDiceData.Dice(
 						dateDiceData.foodDice2Options
 					);
-					foodDice2.rollDice();
+					diceResult.textContent = foodDice2.rollDice();
 					break;
 			}
 		}
-		dice.textContent = dateDiceData.diceLabels[i];
-		content.appendChild(dice);
+		dice.appendChild(diceResult);
+
+		diceGrid.appendChild(dice);
+		content.appendChild(diceGrid);
 	}
 };
 

@@ -1,222 +1,77 @@
+/*  Josh's Custom CSS Reset  https://www.joshwcomeau.com/css/custom-css-reset/*/
+*, *::before, *::after {
+    box-sizing: border-box;}
+* {
+    margin: 0;}
 body {
-    font-family: Roboto, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
+    line-height: 1.5;  -webkit-font-smoothing: antialiased;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
+img, picture, video, canvas, svg {
+    display: block;  max-width: 100%;}
+input, button, textarea, select {
+    font: inherit;}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;}
 p {
-    margin: 0;
-    padding: 0;
+    text-wrap: pretty;}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;}
+#root, #__next {
+    isolation: isolate;}
+
+#nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
-}
-
-h3 {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-button {
-    padding: 8px 24px;
+#nav button {
+    margin-top: 8px;
+    padding: 0 1rem;
+    height: 3rem;
     border: none;
-    border-radius: 4px;
-    color: #f9faf8;
-    background-color: #3882f6;
-    font-weight: 900;
-}
-
-/* Colours */
-
-.dark-blue {
-    background-color: #1f2937;
-}
-
-.blue {
-    background-color: #3882f6;
-}
-
-.grey {
-    background-color: #e5e7eb;
-}
-
-/* Header */
-
-.header {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-.nav {
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-left {
-    flex: 0 0 auto;
-}
-
-.nav-right {
-    flex: 0 0 auto;
-}
-
-.nav-right ul {
-    display: flex;
-    gap: 16px;
-}
-
-.nav-right li {
-    flex: 0 0 auto;
-}
-
-/* Body */
-
-.section {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 40px;
-}
-
-.hero {
-    width: 1200px;
-    display: flex;
-    gap: 80px;
-    /* justify-content: space-between; */
-    align-items: center;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.hero-main {
-    font-size: 48px;
-    color: #f9faf8;
-    font-weight: 900;
-}
-
-.subtext {
-    font-size: 18px;
-    color: #e5e7eb;
-    font-weight: 100;
-}
-
-.logo {
+    border-radius: 8px 8px 0px 0px;
     font-size: 24px;
-    color: #f9faf8;
-    font-weight: 900;
+    font-weight: 500;
+    color: orange;
+    background-color: white;
 }
 
-.header li {
-    font-size: 18px;
-    color: #e5e7eb;
-    font-weight: 100;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.info-header {
-    margin-bottom: 16px;
-    font-size: 36px;
-    color: #1f2937;
-    font-weight: 900;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-}
-
-.card-item {
-    width: 160px;
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.card-item img {
-    border: 3px solid #3882f6;
-    border-radius: 16px;
-}
-
-.card-item p {
-    font-size: 18px;
-    color: #1f2937;
-    font-weight: 100;
-    text-align: center;
-}
-
-.pull-quote {
-    margin: 48px 0px;
-    width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-}
-
-.quote {
-    font-size: 36px;
-    color: #1f2937;
-    font-weight: 100;
-    font-style: italic;
-}
-
-.caption {
-    margin-left: auto;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.cta {
-    padding: 32px 100px;
-    border-radius: 8px;
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-    color: #f9faf8;
-}
-
-.cta-text {
+#content {
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 2rem;
 }
 
-.cta button {
-    flex: 0 0 auto;
-    border: 2px solid #f9faf8;
+#diceGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
-.footer {
-    padding: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#diceGrid button {
+    aspect-ratio: 1 / 1;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+#diceGrid button:hover {
+    border: 2px solid orange;
+    transition: background-color 0.5s ease-in-out, border-color 0 ease-in-out;
+}
+
+#diceGrid button:active {
+    background-color: orange;
+    transition: none;
+}
+
+#diceGrid button > p:last-child {
+    font-weight: 700;;
 }
